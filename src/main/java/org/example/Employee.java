@@ -9,10 +9,6 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int    id;
 
-/*    @Id
-    @GeneratedValue
-    private int    id;
-*/
     @Column(name = "FIRST_NAME")
     private String firstName;
 
@@ -31,8 +27,8 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                " , firstName='" + firstName + '\'' +
-                " , lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }
