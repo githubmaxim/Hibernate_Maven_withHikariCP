@@ -9,7 +9,8 @@ public class Main {
         try(Session session = HibernateUtil.getSession()) {
             session.beginTransaction();
 
-            Employee employee = new Employee();
+//            Employee employee = new Employee();
+            EmployeeUUID employee = new EmployeeUUID();
             employee.setFirstName("Vova");
             employee.setLastName("Nik");
 
@@ -20,13 +21,16 @@ public class Main {
             e.printStackTrace();
         }
 
-        List<Employee> list = null;
+//        List<Employee> list = null;
+        List<EmployeeUUID> list = null;
 
         try(Session session = HibernateUtil.getSession()) {
             session.beginTransaction();
 
-            Query query = session.createQuery("FROM Employee");
-            list = (List<Employee>) query.list();
+//            Query query = session.createQuery("FROM Employee");
+            Query query = session.createQuery("FROM EmployeeUUID");
+//            list = (List<Employee>) query.list();
+            list = (List<EmployeeUUID>) query.list();
 
             session.getTransaction().commit();
         } catch (Throwable e) {
@@ -34,7 +38,8 @@ public class Main {
         }
 
         if (list != null && !list.isEmpty()) {
-            for (Employee employee: list) {
+//            for (Employee employee: list) {
+            for (EmployeeUUID employee: list) {
                 System.out.println(employee);
             }
         }

@@ -4,19 +4,19 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table(name = "employee")
-public class Employee {
-    @Id
+@Table(name = "employeeUUID")
+public class EmployeeUUID {
+    /*@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int    id;
     public int    getId() {return id;}
-    public void   setId(int id) {this.id = id;}
+    public void   setId(int id) {this.id = id;}*/
 
-   /* @Id
+    @Id
     @GeneratedValue
     private UUID id;
     public UUID    getId() {return id;}
-    public void   setId(UUID id) {this.id = id;}*/
+    public void   setId(UUID id) {this.id = id;}
 
     @Column(name = "FIRST_NAME")
     private String firstName;
@@ -24,7 +24,7 @@ public class Employee {
     @Column(name = "LAST_NAME")
     private String lastName;
 
-    public Employee() {}
+    public EmployeeUUID() {}
 
     public String getFirstName() {return firstName;}
     public void   setFirstName(String firstName) {this.firstName = firstName;}

@@ -25,6 +25,7 @@
         <property name="hibernate.format_sql">true</property>
 
         <mapping class="org.example.Employee" />
+        <mapping class="org.example.EmployeeUUID" />
     </session-factory>
 </hibernate-configuration>
 
