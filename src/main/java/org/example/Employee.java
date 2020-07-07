@@ -12,12 +12,6 @@ public class Employee {
     public int    getId() {return id;}
     public void   setId(int id) {this.id = id;}
 
-   /* @Id
-    @GeneratedValue
-    private UUID id;
-    public UUID    getId() {return id;}
-    public void   setId(UUID id) {this.id = id;}*/
-
     @Column(name = "FIRST_NAME")
     private String firstName;
 
