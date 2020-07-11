@@ -1,8 +1,35 @@
+//Created "id" with using UUID
+
 package org.example;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.UUID;
 
+@Entity
+@Table(name = "employeeUUID")
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+public class EmployeeUUID {
+
+    @Id
+    @GeneratedValue
+    private UUID id;
+
+    @Column(name = "FIRST_NAME")
+    private String firstName;
+
+    @Column(name = "LAST_NAME")
+    private String lastName;
+}
+
+/*  ИЛИ ТОЖЕ САМОЕ, НО ОЧЕНЬ МНОГО НАПИСАННОГО
 @Entity
 @Table(name = "employeeUUID")
 public class EmployeeUUID {
@@ -34,4 +61,4 @@ public class EmployeeUUID {
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
-}
+}*/

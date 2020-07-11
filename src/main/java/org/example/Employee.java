@@ -1,8 +1,31 @@
 package org.example;
 
-import javax.persistence.*;
-import java.util.UUID;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "employee")
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int    id;
+
+    @Column(name = "FIRST_NAME")
+    private String firstName;
+
+    @Column(name = "LAST_NAME")
+    private String lastName;
+}
+
+/* ИЛИ ТОЖЕ САМОЕ, НО ОЧЕНЬ МНОГО НАПИСАННОГО
 @Entity
 @Table(name = "employee")
 public class Employee {
@@ -33,4 +56,4 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
-}
+}*/
