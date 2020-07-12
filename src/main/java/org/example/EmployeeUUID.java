@@ -6,12 +6,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
 @Table(name = "employeeUUID")
+@Audited /* подключаем Envers */
 @Getter
 @Setter
 @ToString
@@ -29,7 +31,7 @@ public class EmployeeUUID {
     private String lastName;
 }
 
-/*  ИЛИ ТОЖЕ САМОЕ, НО ОЧЕНЬ МНОГО НАПИСАННОГО
+/*  ИЛИ ТОЖЕ САМОЕ, НО БЕЗ Lombok
 @Entity
 @Table(name = "employeeUUID")
 public class EmployeeUUID {

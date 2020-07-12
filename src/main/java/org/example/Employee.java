@@ -4,11 +4,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "employee")
+@Audited /* подключаем Envers */
 @Getter
 @Setter
 @ToString
@@ -25,7 +27,7 @@ public class Employee {
     private String lastName;
 }
 
-/* ИЛИ ТОЖЕ САМОЕ, НО ОЧЕНЬ МНОГО НАПИСАННОГО
+/* ИЛИ ТОЖЕ САМОЕ, НО БЕЗ Lombok
 @Entity
 @Table(name = "employee")
 public class Employee {
