@@ -9,7 +9,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        try (Session session = HibernateUtil.getSession()) {
+//        try (Session session = HibernateUtil.getSession()) {
+        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();
 
             Employee employee = new Employee();
@@ -27,7 +28,8 @@ public class Main {
         List<Employee> list = null;
 //        List<EmployeeUUID> list = null;
 
-        try (Session session = HibernateUtil.getSession()) {
+//        try (Session session = HibernateUtil.getSession()) {
+        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();
 
             Query query = session.createQuery("FROM Employee");
@@ -50,15 +52,19 @@ public class Main {
         }
 
         //блок работы Envers, покажет когда и какие изменения были сделаны в таблице Employee
-        try (Session session = HibernateUtil.getSession()) {
+        //Не увидит если провести изменения на стороне БД!
+
+//        try (Session session = HibernateUtil.getSession()) {
+        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();
+            System.out.println("\n------This is block Envers------");
             AuditReaderFactory
                     .get(session)
                     .createQuery()
                     .forRevisionsOfEntity(Employee.class, false, true)
                     .getResultList()
                     .forEach(r -> {
-                        Object[] v = (Object[])r;
+                        Object[] v = (Object[]) r;
                         System.out.println(v[0]);
                         System.out.println(v[1]);
                         System.out.println(v[2]);
@@ -68,6 +74,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        HibernateUtil.shutDown();
+//        HibernateUtil.shutDown();
+        HibernateUtilWithLongCodeForListener.shutDown();
     }
 }
