@@ -19,7 +19,6 @@
         <hibernate.version>5.3.7.Final</hibernate.version> <!--это переменная со значением, которая исподьзуется дальше в dependency-->
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
