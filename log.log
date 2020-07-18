@@ -1,0 +1,20 @@
+2020-07-18 14:50:58,240 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-18 14:50:58,242 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-07-18 14:50:58,353 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-07-18 14:50:58,640 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-18 14:50:58,839 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-07-18 14:50:58,848 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-07-18 14:50:58,863 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-07-18 14:50:59,189 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-07-18 14:50:59,201 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-18 14:50:59,625 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-18 14:50:59,710 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-07-18 14:50:59,720 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-18 14:50:59,727 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-07-18 14:51:00,068 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (FIRST_NAME, LAST_NAME) values (?, ?)
+2020-07-18 14:51:00,100 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-18 14:51:00,162 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_0_, employee0_.FIRST_NAME as FIRST_NA2_0_, employee0_.LAST_NAME as LAST_NAM3_0_ from employee employee0_ for update
+2020-07-18 14:51:00,178 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-07-18 14:51:00,178 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-07-18 14:51:00,193 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-07-18 14:51:00,193 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.

@@ -6,14 +6,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.envers.Audited;
+//import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
 @Table(name = "employeeUUID")
-@Audited /* подключаем Envers */
+//@Audited /* подключаем Envers */
 @Getter
 @Setter
 @ToString

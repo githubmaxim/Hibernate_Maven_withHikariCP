@@ -4,13 +4,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.envers.Audited;
+//import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "employee")
-@Audited /* подключаем Envers */
+//@Audited /* подключаем Envers */
 @Getter
 @Setter
 @ToString

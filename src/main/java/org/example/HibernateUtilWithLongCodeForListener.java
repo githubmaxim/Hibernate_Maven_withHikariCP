@@ -1,3 +1,4 @@
+//Реализация со слушателем событий
 package org.example;
 
 import java.util.HashMap;

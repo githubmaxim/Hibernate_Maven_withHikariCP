@@ -19,9 +19,22 @@
         <hibernate.version>5.3.7.Final</hibernate.version> <!--это переменная со значением, которая исподьзуется дальше в dependency-->
     </properties>
 
+
     <dependencies>
-    <!--Для подключения Кеша 2-го уровня или подключения Кеша запросов подключаем
-    интерфейс "JCache" с реализацией "ehcache"-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
+        </dependency>
+
+        <!--Для подключения "Кеша 2-го уровня" / "Кеша запросов" подключаем
+        интерфейс "JCache" с реализацией "ehcache"-->
         <dependency>
             <groupId>org.ehcache</groupId>
             <artifactId>ehcache</artifactId>
@@ -32,7 +45,6 @@
             <artifactId>hibernate-jcache</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
-
 
         <!--Обязательная вставка следующего тройного блока dependency,
         т.к. в последних версиях поддержка xml.bind отсутвует-->
@@ -59,17 +71,8 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.19</version>
-        </dependency>
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
+<!--        Для подключения самого быстрого пула соединений HikariCP-->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-hikaricp</artifactId>
@@ -89,12 +92,31 @@
             <scope>provided</scope>
         </dependency>
 
-<!--        Подключаем Envers, для возможности получения информации об изменениях в таблицах (когда/как/кто)-->
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-envers</artifactId>
-            <version>${hibernate.version}</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.6.1</version>
         </dependency>
+<!--        Не будет смотреть на файл log4j.properties-->
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-simple</artifactId>-->
+<!--            <version>1.7.30</version>-->
+<!--        </dependency>-->
+
+    <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--Подключаем прогу Envers, для возможности получения информации об изменениях в таблицах (когда/как/кто)-->
+<!--        <dependency>-->
+<!--            <groupId>org.hibernate</groupId>-->
+<!--            <artifactId>hibernate-envers</artifactId>-->
+<!--            <version>${hibernate.version}</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
@@ -140,6 +162,24 @@
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.2.0</version>
+                    <executions>
+                        <execution>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>javadoc</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <!-- optional -->
+                        <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
+                    </configuration>
+                </plugin>
+
             </plugins>
         </pluginManagement>
         <plugins>
