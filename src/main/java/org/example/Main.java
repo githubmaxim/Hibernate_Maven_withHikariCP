@@ -5,10 +5,27 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import javax.persistence.LockModeType;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
+        //блок работы Валидации
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        Validator validator = factory.getValidator();
+        ForValidator forValidator = new ForValidator();
+        forValidator.setA(0);
+        forValidator.setB(5);
+        Set<ConstraintViolation<ForValidator>> violations = validator.validate(forValidator);
+        for (ConstraintViolation<ForValidator> violation : violations) {
+            System.out.println(violation.getMessage());
+        }
+
+
         try (Session session = HibernateUtil.getSession()) {
 //        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();

@@ -18,3 +18,151 @@
 2020-07-18 14:51:00,178 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
 2020-07-18 14:51:00,193 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
 2020-07-18 14:51:00,193 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-07-22 14:13:18,991 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-22 14:13:19,003 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-07-22 14:13:19,221 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-07-22 14:13:19,653 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-22 14:13:19,847 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-07-22 14:13:19,854 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-07-22 14:13:19,864 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-07-22 14:13:20,289 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-07-22 14:13:20,308 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-22 14:13:20,826 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:13:20,933 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-07-22 14:13:20,947 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:13:20,952 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-07-22 14:13:20,998 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-07-22 14:13:21,433 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (FIRST_NAME, LAST_NAME) values (?, ?)
+2020-07-22 14:13:21,485 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-22 14:13:21,553 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_0_, employee0_.FIRST_NAME as FIRST_NA2_0_, employee0_.LAST_NAME as LAST_NAM3_0_ from employee employee0_ for update
+2020-07-22 14:13:21,572 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-07-22 14:13:21,573 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-07-22 14:13:21,586 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-07-22 14:13:21,587 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-07-22 14:25:07,935 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-22 14:25:07,939 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-07-22 14:25:08,078 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-07-22 14:25:08,410 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-22 14:25:08,628 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-07-22 14:25:08,637 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-07-22 14:25:08,647 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-07-22 14:25:08,975 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-07-22 14:25:08,992 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-22 14:25:09,439 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:25:09,538 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-07-22 14:25:09,550 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:25:09,556 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-07-22 14:25:09,596 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-07-22 14:25:09,940 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (FIRST_NAME, LAST_NAME) values (?, ?)
+2020-07-22 14:25:09,976 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-22 14:25:10,032 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_0_, employee0_.FIRST_NAME as FIRST_NA2_0_, employee0_.LAST_NAME as LAST_NAM3_0_ from employee employee0_ for update
+2020-07-22 14:25:10,051 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-07-22 14:25:10,052 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-07-22 14:25:10,065 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-07-22 14:25:10,066 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-07-22 14:30:04,841 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-07-22 14:31:12,085 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-07-22 14:31:12,588 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-22 14:31:12,590 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-07-22 14:31:12,712 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-07-22 14:31:13,013 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-22 14:31:13,171 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-07-22 14:31:13,177 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-07-22 14:31:13,184 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-07-22 14:31:13,566 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-07-22 14:31:13,581 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-22 14:31:14,037 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:31:14,140 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-07-22 14:31:14,153 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:31:14,159 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-07-22 14:31:14,532 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (FIRST_NAME, LAST_NAME) values (?, ?)
+2020-07-22 14:31:14,570 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-22 14:31:14,628 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_0_, employee0_.FIRST_NAME as FIRST_NA2_0_, employee0_.LAST_NAME as LAST_NAM3_0_ from employee employee0_ for update
+2020-07-22 14:31:14,661 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-07-22 14:31:14,662 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-07-22 14:31:14,683 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-07-22 14:31:14,684 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-07-22 14:32:56,123 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-07-22 14:32:56,563 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-22 14:32:56,565 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-07-22 14:32:56,692 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-07-22 14:32:57,025 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-22 14:32:57,187 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-07-22 14:32:57,194 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-07-22 14:32:57,202 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-07-22 14:32:57,537 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-07-22 14:32:57,553 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-22 14:32:58,012 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:32:58,113 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-07-22 14:32:58,125 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:32:58,131 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-07-22 14:32:58,498 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (FIRST_NAME, LAST_NAME) values (?, ?)
+2020-07-22 14:32:58,535 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-22 14:32:58,593 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_0_, employee0_.FIRST_NAME as FIRST_NA2_0_, employee0_.LAST_NAME as LAST_NAM3_0_ from employee employee0_ for update
+2020-07-22 14:32:58,625 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-07-22 14:32:58,626 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-07-22 14:32:58,646 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-07-22 14:32:58,648 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-07-22 14:33:22,894 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-22 14:33:22,898 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-07-22 14:33:23,023 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-07-22 14:33:23,333 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-22 14:33:23,556 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-07-22 14:33:23,562 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-07-22 14:33:23,571 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-07-22 14:33:23,918 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-07-22 14:33:23,931 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-22 14:33:24,401 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:33:24,505 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-07-22 14:33:24,518 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:33:24,524 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-07-22 14:33:24,566 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-07-22 14:33:25,046 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (FIRST_NAME, LAST_NAME) values (?, ?)
+2020-07-22 14:33:25,082 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-22 14:33:25,138 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_0_, employee0_.FIRST_NAME as FIRST_NA2_0_, employee0_.LAST_NAME as LAST_NAM3_0_ from employee employee0_ for update
+2020-07-22 14:33:25,156 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-07-22 14:33:25,157 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-07-22 14:33:25,169 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-07-22 14:33:25,170 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-07-22 14:36:02,507 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-07-22 14:36:02,944 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-22 14:36:02,945 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-07-22 14:36:03,059 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-07-22 14:36:03,376 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-22 14:36:03,539 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-07-22 14:36:03,548 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-07-22 14:36:03,557 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-07-22 14:36:03,891 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-07-22 14:36:03,907 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-22 14:36:04,363 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:36:04,461 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-07-22 14:36:04,472 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:36:04,477 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-07-22 14:36:04,828 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (FIRST_NAME, LAST_NAME) values (?, ?)
+2020-07-22 14:36:04,866 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-22 14:36:04,926 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_0_, employee0_.FIRST_NAME as FIRST_NA2_0_, employee0_.LAST_NAME as LAST_NAM3_0_ from employee employee0_ for update
+2020-07-22 14:36:04,961 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-07-22 14:36:04,962 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-07-22 14:36:04,984 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-07-22 14:36:04,985 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-07-22 14:43:35,320 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-07-22 14:43:35,741 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-22 14:43:35,743 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-07-22 14:43:35,855 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-07-22 14:43:36,185 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-22 14:43:36,352 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-07-22 14:43:36,358 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-07-22 14:43:36,365 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-07-22 14:43:36,704 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-07-22 14:43:36,721 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-22 14:43:37,161 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:43:37,256 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-07-22 14:43:37,266 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-07-22 14:43:37,271 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-07-22 14:43:37,629 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (FIRST_NAME, LAST_NAME) values (?, ?)
+2020-07-22 14:43:37,667 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-22 14:43:37,726 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_0_, employee0_.FIRST_NAME as FIRST_NA2_0_, employee0_.LAST_NAME as LAST_NAM3_0_ from employee employee0_ for update
+2020-07-22 14:43:37,763 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-07-22 14:43:37,764 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-07-22 14:43:37,781 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-07-22 14:43:37,782 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.

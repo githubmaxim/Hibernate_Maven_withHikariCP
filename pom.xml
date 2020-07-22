@@ -16,7 +16,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
-        <hibernate.version>5.3.7.Final</hibernate.version> <!--это переменная со значением, которая исподьзуется дальше в dependency-->
+        <hibernate.version>5.3.7.Final
+        </hibernate.version> <!--это переменная со значением, которая исподьзуется дальше в dependency-->
     </properties>
 
     <dependencies>
@@ -71,7 +72,7 @@
         </dependency>
 
 
-<!--        Для подключения самого быстрого пула соединений HikariCP-->
+        <!--        Для подключения самого быстрого пула соединений HikariCP-->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-hikaricp</artifactId>
@@ -96,14 +97,14 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.6.1</version>
         </dependency>
-<!--        Не будет смотреть на файл log4j.properties-->
-<!--        <dependency>-->
-<!--            <groupId>org.slf4j</groupId>-->
-<!--            <artifactId>slf4j-simple</artifactId>-->
-<!--            <version>1.7.30</version>-->
-<!--        </dependency>-->
+        <!--        Не будет смотреть на файл log4j.properties-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.slf4j</groupId>-->
+        <!--            <artifactId>slf4j-simple</artifactId>-->
+        <!--            <version>1.7.30</version>-->
+        <!--        </dependency>-->
 
-    <dependency>
+        <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>RELEASE</version>
@@ -111,11 +112,31 @@
         </dependency>
 
         <!--Подключаем прогу Envers, для возможности получения информации об изменениях в таблицах (когда/как/кто)-->
-<!--        <dependency>-->
-<!--            <groupId>org.hibernate</groupId>-->
-<!--            <artifactId>hibernate-envers</artifactId>-->
-<!--            <version>${hibernate.version}</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.hibernate</groupId>-->
+        <!--            <artifactId>hibernate-envers</artifactId>-->
+        <!--            <version>${hibernate.version}</version>-->
+        <!--        </dependency>-->
+
+        <!--        Подключаем 3 обязательных блока для включения Валидации (для доп.функционала
+        есть еще блок "hibernate-validator-cdi")-->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.1.5.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator-annotation-processor</artifactId>
+            <version>6.1.5.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.el</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+
+
 
     </dependencies>
 
