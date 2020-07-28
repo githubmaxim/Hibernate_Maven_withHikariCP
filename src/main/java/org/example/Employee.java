@@ -20,6 +20,9 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int    id;
 
+    @Version //устанавливается оптимистическая блокировка для полей класса
+    private int version;
+
     @Column(name = "FIRST_NAME")
     private String firstName;
 
@@ -36,6 +39,9 @@ public class Employee {
     private int    id;
     public int    getId() {return id;}
     public void   setId(int id) {this.id = id;}
+
+    @Version //устанавливается оптимистическая блокировка для полей класса
+    private int version;
 
     @Column(name = "FIRST_NAME")
     private String firstName;

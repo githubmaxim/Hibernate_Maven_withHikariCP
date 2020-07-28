@@ -11,7 +11,7 @@ import javax.validation.constraints.Positive;
 @ToString
 public class ForValidator {
 
-    @Positive(message = "a cannot be null")
+    @Positive(message = "\"a\" cannot be null")
     private int a;
     private int b;
 

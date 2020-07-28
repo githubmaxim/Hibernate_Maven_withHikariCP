@@ -24,6 +24,9 @@ public class EmployeeUUID {
     @GeneratedValue
     private UUID id;
 
+    @Version //устанавливается оптимистическая блокировка для полей класса
+    private int version;
+
     @Column(name = "FIRST_NAME")
     private String firstName;
 
@@ -41,6 +44,9 @@ public class EmployeeUUID {
     private UUID id;
     public UUID    getId() {return id;}
     public void   setId(UUID id) {this.id = id;}
+
+    @Version //устанавливается оптимистическая блокировка для полей класса
+    private int version;
 
     @Column(name = "FIRST_NAME")
     private String firstName;

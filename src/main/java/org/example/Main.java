@@ -20,6 +20,7 @@ public class Main {
         ForValidator forValidator = new ForValidator();
         forValidator.setA(0);
         forValidator.setB(5);
+        System.out.println(forValidator.summ());
         Set<ConstraintViolation<ForValidator>> violations = validator.validate(forValidator);
         for (ConstraintViolation<ForValidator> violation : violations) {
             System.out.println(violation.getMessage());
