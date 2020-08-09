@@ -25,8 +25,8 @@
         <!--Дополнительные Настройки-->
         <property name="hikari.maximumPoolSize">30</property>
         <property name="hikari.connectionTimeout">10000</property>
-<!--        <property name="hibernate.show_sql">true</property>-->
-<!--        <property name="hibernate.format_sql">true</property>-->
+<!--        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>-->
 
         <!--Для подключения Кеша 2-го уровня или подключения Кеша запросов подключаем
         интерфейс "JCache" с реализацией "ehcache"-->
@@ -36,6 +36,8 @@
 
         <mapping class="org.example.Employee"/>
         <mapping class="org.example.EmployeeUUID"/>
+        <mapping class="org.example.University"/>
+        <mapping class="org.example.University2"/>
     </session-factory>
 </hibernate-configuration>
 

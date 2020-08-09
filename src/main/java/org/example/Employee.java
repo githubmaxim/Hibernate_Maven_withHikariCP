@@ -7,18 +7,19 @@ import lombok.ToString;
 //import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "employee")
 //@Audited /* подключаем Envers */
 @Getter
 @Setter
-@ToString
+//@ToString - эта аннотация не работает и при попытке вывода на экран выдает ошибку
 @NoArgsConstructor
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int    id;
+    private int id;
 
     @Version //устанавливается оптимистическая блокировка для полей класса
     private int version;
@@ -28,6 +29,27 @@ public class Employee {
 
     @Column(name = "LAST_NAME")
     private String lastName;
+
+    @Column(name = "AGE")
+    private String age;
+
+    @ManyToMany
+    @JoinTable(name = "Employee_University", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
+    private List<University> universities;
+
+    @ManyToMany (cascade=CascadeType.ALL)
+    @JoinTable(name = "Employee_University2", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
+    private List<University2> universities2;
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+    }
 }
 
 /* ИЛИ ТОЖЕ САМОЕ, НО БЕЗ Lombok
