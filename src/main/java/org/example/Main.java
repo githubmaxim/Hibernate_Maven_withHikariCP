@@ -27,27 +27,49 @@ public class Main {
             System.out.println(violation.getMessage());
         }*/
 
-       /* List<Employee> list = null;
+
         try (Session session = HibernateUtil.getSession()) {
             session.beginTransaction();
-            session.createSQLQuery("ALTER TABLE Employee_University2 DROP COLUMN university2_id");
+            /*session.createSQLQuery("ALTER TABLE Employee_University2 DROP COLUMN university2_id");
             Query query = session.createQuery("FROM Employee");
-            list = (List<Employee>) query.list();
-//            list = (List<EmployeeUUID>) query.list();
+            list = (List<Employee>) query.list();*/
 
+            ForDelete forDelete = new ForDelete();
+            forDelete.setName("mmm");
+            session.persist(forDelete);
+            session.getTransaction().commit();
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
+        List<ForDelete> list = null;
+        try (Session session = HibernateUtil.getSession()) {
+            session.beginTransaction();
+            Query query = session.createQuery("FROM ForDelete");
+            list = (List<ForDelete>) query.list();
             session.getTransaction().commit();
         } catch (Throwable e) {
             e.printStackTrace();
         }
 
         if (list != null && !list.isEmpty()) {
-            for (Employee employee : list) {
-//            for (EmployeeUUID employee: list) {
-                System.out.println(employee);
+            for (ForDelete fd : list) {
+                System.out.println(fd);
             }
-        }*/
+        }
+
 
         try (Session session = HibernateUtil.getSession()) {
+            session.beginTransaction();
+            session.createQuery("delete from ForDelete").executeUpdate();
+            session.getTransaction().commit();
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
+
+
+/*        try (Session session = HibernateUtil.getSession()) {
 //        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();
 
@@ -128,7 +150,7 @@ public class Main {
 //            for (EmployeeUUID employee: list) {
                 System.out.println(employee);
             }
-        }
+        }*/
 
         //блок работы Envers, покажет когда и какие изменения были сделаны в таблице Employee
         //Не увидит если провести изменения на стороне БД!
