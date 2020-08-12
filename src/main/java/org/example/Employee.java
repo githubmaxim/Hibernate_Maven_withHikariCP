@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "employee")
@@ -33,9 +34,9 @@ public class Employee {
     @Column(name = "AGE")
     private String age;
 
-    @ManyToMany
+    @ManyToMany (cascade=CascadeType.ALL)
     @JoinTable(name = "Employee_University", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
-    private List<University> universities;
+    private Set<University> universities;
 
     @ManyToMany (cascade=CascadeType.ALL)
     @JoinTable(name = "Employee_University2", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))

@@ -10,6 +10,7 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -27,49 +28,8 @@ public class Main {
             System.out.println(violation.getMessage());
         }*/
 
-
+        //блок для заполнения БД
         try (Session session = HibernateUtil.getSession()) {
-            session.beginTransaction();
-            /*session.createSQLQuery("ALTER TABLE Employee_University2 DROP COLUMN university2_id");
-            Query query = session.createQuery("FROM Employee");
-            list = (List<Employee>) query.list();*/
-
-            ForDelete forDelete = new ForDelete();
-            forDelete.setName("mmm");
-            session.persist(forDelete);
-            session.getTransaction().commit();
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
-
-        List<ForDelete> list = null;
-        try (Session session = HibernateUtil.getSession()) {
-            session.beginTransaction();
-            Query query = session.createQuery("FROM ForDelete");
-            list = (List<ForDelete>) query.list();
-            session.getTransaction().commit();
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
-
-        if (list != null && !list.isEmpty()) {
-            for (ForDelete fd : list) {
-                System.out.println(fd);
-            }
-        }
-
-
-        try (Session session = HibernateUtil.getSession()) {
-            session.beginTransaction();
-            session.createQuery("delete from ForDelete").executeUpdate();
-            session.getTransaction().commit();
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
-
-
-
-/*        try (Session session = HibernateUtil.getSession()) {
 //        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();
 
@@ -83,41 +43,36 @@ public class Main {
             university3.setName("UNIVER");
             session.persist(university3);
 
-            //for Delete
+            Set<University> universities1 = new HashSet<>();
+            universities1.add(university1);
+            universities1.add(university2);
+            Set<University> universities2 = new HashSet<>();
+            universities2.add(university2);
+            universities2.add(university3);
+
+
             University2 university21 = new University2();
             university21.setName2("ForDelete");
             session.persist(university21);
             List<University2> universities21 = new ArrayList<University2>();
             universities21.add(university21);
 
-            List<University> universities1 = new ArrayList<University>();
-            universities1.add(university1);
-            universities1.add(university2);
 
             Employee employee1 = new Employee();
             employee1.setFirstName("Vova");
             employee1.setLastName("Nik");
             employee1.setAge("19");
             employee1.setUniversities(universities1);
-
-            //for Delete
             employee1.setUniversities2(universities21);
-
             session.save(employee1);
 
-            List<University> universities2 = new ArrayList<University>();
-            universities2.add(university2);
-            universities2.add(university3);
 
             Employee employee2 = new Employee();
             employee2.setFirstName("Kolya");
             employee2.setLastName("Bitten");
             employee2.setAge("22");
             employee2.setUniversities(universities2);
-
-            //for Delete
             employee2.setUniversities2(universities21);
-
             session.save(employee2);
 
             session.getTransaction().commit();
@@ -125,9 +80,10 @@ public class Main {
             e.printStackTrace();
         }
 
+
+        //Блок для создания запроса к БД и выводу его результатов
         List<Employee> list = null;
 //        List<EmployeeUUID> list = null;
-
         try (Session session = HibernateUtil.getSession()) {
 //        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();
@@ -150,11 +106,29 @@ public class Main {
 //            for (EmployeeUUID employee: list) {
                 System.out.println(employee);
             }
+        }
+
+/*        //блок для удаления записей-объектов из БД
+        try (Session session = HibernateUtil.getSession()) {
+            session.beginTransaction();
+            //Удалит объект в корневой сущности и записи в промежуточных таблицах, но оставит записи в связанных таблицах
+            //session.createQuery("DELETE Employee WHERE id = :id").setParameter("id", 72).executeUpdate();
+
+           *//* Employee employee = entityManager.find(Employee.class, 73);
+            entityManager.remove(employee);
+            flushAndClear();*//*
+
+           //Удалит объект в корневой сущности и все записи по этому объекту в промежуточных и связанной таблице/ах, при установленном
+            //в корневой сущности "cascade=CascadeType.ALL".Если это не установить, то в связанной таблице/ах ничего не удалит
+            Employee employee = session.load(Employee.class, 74);
+            if (employee != null) { session.delete(employee);}
+            session.getTransaction().commit();
+        } catch (Throwable e) {
+            e.printStackTrace();
         }*/
 
         //блок работы Envers, покажет когда и какие изменения были сделаны в таблице Employee
         //Не увидит если провести изменения на стороне БД!
-
 //        try (Session session = HibernateUtil.getSession()) {
 ////        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
 //            session.beginTransaction();

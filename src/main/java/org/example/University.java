@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "university")
@@ -27,5 +28,5 @@ public class University {
     @JoinTable(name = "Employee_University", joinColumns = @JoinColumn(name = "university_id"), inverseJoinColumns = @JoinColumn(name = "employee_id"))*/
     //или тут (в этом классе) уже можно было написать просто:
     @ManyToMany (mappedBy = "universities")//, где "universities" это переменная для связи из класса "Employee"
-    private List<Employee> employees;
+    private Set<Employee> employees;
 }
