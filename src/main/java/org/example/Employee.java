@@ -35,7 +35,13 @@ public class Employee {
 
     @ManyToMany
     @JoinTable(name = "Employee_University", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
-    private Set<University> universities;
+    private List<University> universities;
+
+    @ManyToMany
+    @JoinTable(name = "Employee_DelUniversity", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "deluniversity_id"))
+    private List<DelUniversity> deluniversities;
+
+
 
     @ManyToMany (cascade=CascadeType.ALL)
     @JoinTable(name = "Employee_University2", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))

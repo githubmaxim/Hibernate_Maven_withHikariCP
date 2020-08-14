@@ -3118,3 +3118,240 @@
 2020-08-14 15:26:04,366 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
 2020-08-14 15:26:04,377 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
 2020-08-14 15:26:04,378 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-08-14 16:29:14,899 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-08-14 16:29:14,899 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-08-14 16:29:15,043 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-08-14 16:29:15,331 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-08-14 16:29:15,522 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-08-14 16:29:15,528 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-08-14 16:29:15,536 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-08-14 16:29:15,845 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-08-14 16:29:15,859 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-14 16:30:10,210 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-08-14 16:30:10,214 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-08-14 16:30:10,327 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-08-14 16:30:10,584 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-08-14 16:30:10,779 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-08-14 16:30:10,789 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-08-14 16:30:10,798 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-08-14 16:30:11,086 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-08-14 16:30:11,101 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-14 16:30:11,554 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:30:11,647 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-08-14 16:30:11,663 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:30:11,663 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-08-14 16:30:11,694 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-14 16:30:12,228 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table delcity (id integer not null auto_increment, town varchar(255) not null, primary key (id)) engine=MyISAM
+2020-08-14 16:30:12,235 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table Employee_DelUniversity (employee_id integer not null, deluniversity_id integer not null, primary key (employee_id, deluniversity_id)) engine=MyISAM
+2020-08-14 16:30:12,240 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table javafx.university add column delcity_id integer
+2020-08-14 16:30:12,254 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FK5cfjeo66whacn8kjd1i2bvof4 foreign key (deluniversity_id) references university (id)
+2020-08-14 16:30:12,267 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FKqdejxk3qyrojf5bv82oin1lox foreign key (employee_id) references employee (id)
+2020-08-14 16:30:12,294 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-08-14 16:30:12,308 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-08-14 16:30:12,332 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-08-14 16:30:12,346 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-08-14 16:30:12,370 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-08-14 16:30:12,385 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FKdququ3hg4lauou13bdtj5mebw foreign key (delcity_id) references delcity (id)
+2020-08-14 16:30:12,465 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into city (town) values (?)
+2020-08-14 16:30:12,489 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into city (town) values (?)
+2020-08-14 16:30:12,491 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (city_id, name) values (?, ?)
+2020-08-14 16:30:12,494 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (city_id, name) values (?, ?)
+2020-08-14 16:30:12,495 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (city_id, name) values (?, ?)
+2020-08-14 16:30:12,497 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university2 (name2) values (?)
+2020-08-14 16:30:12,503 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:30:12,508 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:30:12,516 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
+2020-08-14 16:30:12,518 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
+2020-08-14 16:30:12,519 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:30:12,520 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
+2020-08-14 16:30:12,521 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
+2020-08-14 16:30:12,522 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:30:12,527 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:30:12,530 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:30:12,532 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:30:12,534 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:30:12,535 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:30:12,536 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university2 (name2) values (?)
+2020-08-14 16:30:12,537 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:30:12,539 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:30:12,541 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:30:12,542 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:30:12,543 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:30:12,544 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:30:12,545 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:30:12,545 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:30:12,556 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-08-14 16:30:12,612 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_2_, employee0_.age as age2_2_, employee0_.firstName as firstNam3_2_, employee0_.lastName as lastName4_2_, employee0_.version as version5_2_ from employee employee0_ for update
+2020-08-14 16:30:12,635 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-08-14 16:30:12,636 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-08-14 16:30:12,646 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-08-14 16:30:12,647 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-08-14 16:36:38,017 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-08-14 16:36:38,017 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-08-14 16:36:38,141 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-08-14 16:36:38,422 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-08-14 16:36:38,641 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-08-14 16:36:38,641 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-08-14 16:36:38,656 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-08-14 16:36:38,968 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-08-14 16:36:38,968 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-14 16:36:39,434 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:36:39,527 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-08-14 16:36:39,536 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:36:39,541 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-08-14 16:36:39,573 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-14 16:36:40,100 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FK5cfjeo66whacn8kjd1i2bvof4 foreign key (deluniversity_id) references university (id)
+2020-08-14 16:36:40,117 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FKqdejxk3qyrojf5bv82oin1lox foreign key (employee_id) references employee (id)
+2020-08-14 16:36:40,140 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-08-14 16:36:40,155 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-08-14 16:36:40,181 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-08-14 16:36:40,195 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-08-14 16:36:40,219 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-08-14 16:36:40,235 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FKdququ3hg4lauou13bdtj5mebw foreign key (delcity_id) references delcity (id)
+2020-08-14 16:36:40,314 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:36:40,338 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:36:40,341 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:36:40,343 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:36:40,344 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:36:40,346 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university2 (name2) values (?)
+2020-08-14 16:36:40,353 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:36:40,357 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:36:40,365 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:36:40,367 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:36:40,368 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:36:40,369 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:36:40,370 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:36:40,371 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:36:40,383 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-08-14 16:36:40,439 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_2_, employee0_.age as age2_2_, employee0_.firstName as firstNam3_2_, employee0_.lastName as lastName4_2_, employee0_.version as version5_2_ from employee employee0_ for update
+2020-08-14 16:36:40,463 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-08-14 16:36:40,464 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-08-14 16:36:40,474 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-08-14 16:36:40,476 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-08-14 16:38:54,227 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-08-14 16:38:54,232 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-08-14 16:38:54,368 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-08-14 16:38:54,659 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-08-14 16:38:54,862 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-08-14 16:38:54,869 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-08-14 16:38:54,876 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-08-14 16:38:55,183 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-08-14 16:38:55,196 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-14 16:38:55,667 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:38:55,745 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-08-14 16:38:55,757 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:38:55,761 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-08-14 16:38:55,795 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-14 16:38:56,312 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FK5cfjeo66whacn8kjd1i2bvof4 foreign key (deluniversity_id) references university (id)
+2020-08-14 16:38:56,328 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FKqdejxk3qyrojf5bv82oin1lox foreign key (employee_id) references employee (id)
+2020-08-14 16:38:56,359 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-08-14 16:38:56,374 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-08-14 16:38:56,390 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-08-14 16:38:56,406 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-08-14 16:38:56,437 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-08-14 16:38:56,452 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FKdququ3hg4lauou13bdtj5mebw foreign key (delcity_id) references delcity (id)
+2020-08-14 16:38:56,530 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:38:56,546 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:38:56,546 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:38:56,562 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:38:56,562 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:38:56,562 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university2 (name2) values (?)
+2020-08-14 16:38:56,562 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:38:56,562 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:38:56,577 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:38:56,577 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:38:56,577 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:38:56,577 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:38:56,577 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:38:56,577 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:38:56,593 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-08-14 16:38:56,655 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_2_, employee0_.age as age2_2_, employee0_.firstName as firstNam3_2_, employee0_.lastName as lastName4_2_, employee0_.version as version5_2_ from employee employee0_ for update
+2020-08-14 16:38:56,686 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-08-14 16:38:56,686 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-08-14 16:38:56,686 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-08-14 16:38:56,686 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-08-14 16:42:32,174 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-08-14 16:42:32,174 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-08-14 16:42:32,299 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-08-14 16:42:32,579 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-08-14 16:42:32,767 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-08-14 16:42:32,782 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-08-14 16:42:32,782 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-08-14 16:42:33,105 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-08-14 16:42:33,118 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-14 16:42:33,546 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:42:33,636 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-08-14 16:42:33,648 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:42:33,653 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-08-14 16:42:33,700 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-14 16:42:34,214 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FK5cfjeo66whacn8kjd1i2bvof4 foreign key (deluniversity_id) references university (id)
+2020-08-14 16:42:34,229 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FKqdejxk3qyrojf5bv82oin1lox foreign key (employee_id) references employee (id)
+2020-08-14 16:42:34,254 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-08-14 16:42:34,268 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-08-14 16:42:34,292 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-08-14 16:42:34,305 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-08-14 16:42:34,329 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-08-14 16:42:34,344 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FKdququ3hg4lauou13bdtj5mebw foreign key (delcity_id) references delcity (id)
+2020-08-14 16:42:34,423 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:42:34,447 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:42:34,449 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:42:34,451 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:42:34,454 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (delcity_id, name) values (?, ?)
+2020-08-14 16:42:34,455 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university2 (name2) values (?)
+2020-08-14 16:42:34,462 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:42:34,466 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:42:34,474 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:42:34,476 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:42:34,477 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:42:34,478 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:42:34,479 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:42:34,479 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:42:34,494 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-08-14 16:42:34,553 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_2_, employee0_.age as age2_2_, employee0_.firstName as firstNam3_2_, employee0_.lastName as lastName4_2_, employee0_.version as version5_2_ from employee employee0_ for update
+2020-08-14 16:42:34,577 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-08-14 16:42:34,578 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-08-14 16:42:34,591 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-08-14 16:42:34,592 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.
+2020-08-14 16:44:07,503 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-08-14 16:44:07,507 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-08-14 16:44:07,621 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-08-14 16:44:07,904 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-08-14 16:44:08,099 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-08-14 16:44:08,099 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-08-14 16:44:08,115 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-08-14 16:44:08,427 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-08-14 16:44:08,443 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-14 16:44:08,911 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:44:09,004 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-08-14 16:44:09,021 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-08-14 16:44:09,024 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-08-14 16:44:09,063 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-14 16:44:09,577 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table deluniversity (id integer not null auto_increment, name varchar(255) not null, delcity_id integer, primary key (id)) engine=MyISAM
+2020-08-14 16:44:09,587 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table deluniversity add constraint FKf6o4s2xhc0w1um7qcdx1376gf foreign key (delcity_id) references delcity (id)
+2020-08-14 16:44:09,617 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FKe2a75329gx1j56fj2cd31n7gt foreign key (deluniversity_id) references deluniversity (id)
+2020-08-14 16:44:09,630 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_DelUniversity add constraint FKqdejxk3qyrojf5bv82oin1lox foreign key (employee_id) references employee (id)
+2020-08-14 16:44:09,655 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-08-14 16:44:09,668 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-08-14 16:44:09,693 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-08-14 16:44:09,707 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-08-14 16:44:09,731 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-08-14 16:44:09,812 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:44:09,837 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into delcity (town) values (?)
+2020-08-14 16:44:09,839 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into deluniversity (delcity_id, name) values (?, ?)
+2020-08-14 16:44:09,843 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into deluniversity (delcity_id, name) values (?, ?)
+2020-08-14 16:44:09,845 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into deluniversity (delcity_id, name) values (?, ?)
+2020-08-14 16:44:09,846 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university2 (name2) values (?)
+2020-08-14 16:44:09,853 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:44:09,857 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-08-14 16:44:09,865 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:44:09,867 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:44:09,868 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:44:09,869 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:44:09,869 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_DelUniversity (employee_id, deluniversity_id) values (?, ?)
+2020-08-14 16:44:09,870 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-08-14 16:44:09,884 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-08-14 16:44:09,941 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_3_, employee0_.age as age2_3_, employee0_.firstName as firstNam3_3_, employee0_.lastName as lastName4_3_, employee0_.version as version5_3_ from employee employee0_ for update
+2020-08-14 16:44:09,966 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-query-results-region' removed from EhcacheManager.
+2020-08-14 16:44:09,967 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2020-08-14 16:44:09,977 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2020-08-14 16:44:09,978 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:216) - Cache 'default-update-timestamps-region' removed from EhcacheManager.

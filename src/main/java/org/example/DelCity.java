@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name = "city")
+@Table(name = "delcity")
 @NoArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(of = {"town"})
 @ToString(of = {"town"})
-public class City {
+public class DelCity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +22,6 @@ public class City {
     @Column(nullable = false)
     private String town;
 
-    @OneToMany (mappedBy = "cities")
-    private Set<University> universitySet;
+    @OneToMany (mappedBy = "delcities")
+    private Set<DelUniversity> delUniversitySet;
 }
