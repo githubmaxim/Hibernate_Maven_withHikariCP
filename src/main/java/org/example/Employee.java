@@ -1,9 +1,6 @@
 package org.example;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 //import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
@@ -13,10 +10,12 @@ import java.util.Set;
 @Entity
 @Table(name = "employee")
 //@Audited /* подключаем Envers */
+@NoArgsConstructor
 @Getter
 @Setter
-//@ToString - эта аннотация не работает и при попытке вывода на экран выдает ошибку
-@NoArgsConstructor
+@EqualsAndHashCode(of = {"firstName", "lastName", "age"})
+@ToString (of = {"firstName", "lastName", "age"}) //"(of =" идальше нужно писать, т.к. тут есть поля
+// связей с другими таблицами (universities и universities2) и их механизм этой аннотации вывести не может
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,32 +24,22 @@ public class Employee {
     @Version //устанавливается оптимистическая блокировка для полей класса
     private int version;
 
-    @Column(name = "FIRST_NAME")
+    @Column(nullable = false)
     private String firstName;
 
-    @Column(name = "LAST_NAME")
+    @Column(nullable = false)
     private String lastName;
 
-    @Column(name = "AGE")
+    @Column(nullable = false)
     private String age;
 
-    @ManyToMany (cascade=CascadeType.ALL)
+    @ManyToMany
     @JoinTable(name = "Employee_University", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
     private Set<University> universities;
 
     @ManyToMany (cascade=CascadeType.ALL)
     @JoinTable(name = "Employee_University2", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
     private List<University2> universities2;
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age='" + age + '\'' +
-                '}';
-    }
 }
 
 /* ИЛИ ТОЖЕ САМОЕ, НО БЕЗ Lombok

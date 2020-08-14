@@ -1,9 +1,6 @@
 package org.example;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -11,17 +8,19 @@ import java.util.Set;
 
 @Entity
 @Table(name = "university")
+@NoArgsConstructor
 @Getter
 @Setter
-@ToString
-@NoArgsConstructor
+@EqualsAndHashCode(of = {"name"})
+@ToString(of = {"name"}) //"(of =" идальше нужно писать, т.к. тут есть поле связи с другой таблицей (employees)
+                         // и его механизм этой аннотации вывести не может
 public class University {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "name")
+    @Column(nullable = false)
     private String name;
 
     /*@ManyToMany(fetch=FetchType.EAGER)
@@ -29,4 +28,8 @@ public class University {
     //или тут (в этом классе) уже можно было написать просто:
     @ManyToMany (mappedBy = "universities")//, где "universities" это переменная для связи из класса "Employee"
     private Set<Employee> employees;
+
+    @ManyToOne
+    @JoinColumn (name = "city_id")
+    private City cities;
 }

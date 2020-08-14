@@ -38,6 +38,7 @@
         <mapping class="org.example.EmployeeUUID"/>
         <mapping class="org.example.University"/>
         <mapping class="org.example.University2"/>
+        <mapping class="org.example.City"/>
     </session-factory>
 </hibernate-configuration>
 

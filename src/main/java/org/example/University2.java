@@ -1,26 +1,24 @@
 package org.example;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "university2")
+@NoArgsConstructor
 @Getter
 @Setter
-@ToString
-@NoArgsConstructor
+@EqualsAndHashCode(of = {"name2"})
+@ToString(of = {"name2"})
 public class University2 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "name2")
+    @Column(nullable = false)
     private String name2;
 
     /*@ManyToMany(fetch = FetchType.EAGER)

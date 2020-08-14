@@ -33,14 +33,26 @@ public class Main {
 //        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();
 
+            City city1 = new City();
+            city1.setTown("Kiev");
+            City city2 = new City();
+            city2.setTown("Lviv");
+            session.saveOrUpdate(city1);
+            session.persist(city2);
+
+
+
             University university1 = new University();
             university1.setName("KPI");
-            session.persist(university1);
+            university1.setCities(city1);
             University university2 = new University();
             university2.setName("MAUP");
-            session.persist(university2);
+            university2.setCities(city2);
             University university3 = new University();
             university3.setName("UNIVER");
+            university3.setCities(city1);
+            session.persist(university1);
+            session.persist(university2);
             session.persist(university3);
 
             Set<University> universities1 = new HashSet<>();
@@ -61,7 +73,7 @@ public class Main {
             Employee employee1 = new Employee();
             employee1.setFirstName("Vova");
             employee1.setLastName("Nik");
-            employee1.setAge("19");
+            employee1.setAge("0");
             employee1.setUniversities(universities1);
             employee1.setUniversities2(universities21);
             session.save(employee1);
@@ -108,20 +120,16 @@ public class Main {
             }
         }
 
-/*        //блок для удаления записей-объектов из БД
+ /*       //блок для удаления записей-объектов из БД
         try (Session session = HibernateUtil.getSession()) {
             session.beginTransaction();
             //Удалит объект в корневой сущности и записи в промежуточных таблицах, но оставит записи в связанных таблицах
-            //session.createQuery("DELETE Employee WHERE id = :id").setParameter("id", 72).executeUpdate();
+            session.createQuery("DELETE University WHERE id = :id").setParameter("id", 128).executeUpdate();
 
-           *//* Employee employee = entityManager.find(Employee.class, 73);
-            entityManager.remove(employee);
-            flushAndClear();*//*
-
-           //Удалит объект в корневой сущности и все записи по этому объекту в промежуточных и связанной таблице/ах, при установленном
+            //Удалит объект в корневой сущности и все записи по этому объекту в промежуточных и связанной таблице/ах, при установленном
             //в корневой сущности "cascade=CascadeType.ALL".Если это не установить, то в связанной таблице/ах ничего не удалит
-            Employee employee = session.load(Employee.class, 74);
-            if (employee != null) { session.delete(employee);}
+            University employee = session.load(University.class, 129);
+            if (employee != null) {session.delete(employee);}
             session.getTransaction().commit();
         } catch (Throwable e) {
             e.printStackTrace();
