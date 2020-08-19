@@ -29,7 +29,7 @@ public class Main {
             System.out.println(violation.getMessage());
         }*/
 
-      /*  //блок для заполнения БД
+        //блок для заполнения БД
         try (Session session = HibernateUtil.getSession()) {
 //        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();
@@ -92,72 +92,6 @@ public class Main {
         } catch (Throwable e) {
             e.printStackTrace();
         }
-*/
-
-
-        //block for delete
-        try (Session session = HibernateUtil.getSession()) {
-            session.beginTransaction();
-
-            DelCity delcity1 = new DelCity();
-            delcity1.setTown("Kiev");
-            DelCity delcity2 = new DelCity();
-            delcity2.setTown("Lviv");
-            session.saveOrUpdate(delcity1);
-            session.persist(delcity2);
-
-
-            DelUniversity deluniversity1 = new DelUniversity();
-            deluniversity1.setName("KPI");
-            deluniversity1.setDelcities(delcity1);
-            DelUniversity deluniversity2 = new DelUniversity();
-            deluniversity2.setName("MAUP");
-            deluniversity2.setDelcities(delcity2);
-            DelUniversity deluniversity3 = new DelUniversity();
-            deluniversity3.setName("UNIVER");
-            deluniversity3.setDelcities(delcity1);
-            session.persist(deluniversity1);
-            session.persist(deluniversity2);
-            session.persist(deluniversity3);
-
-            List<DelUniversity> deluniversities1 = new ArrayList<>();
-            deluniversities1.add(deluniversity1);
-            deluniversities1.add(deluniversity2);
-            List<DelUniversity> deluniversities2 = new ArrayList<>();
-            deluniversities2.add(deluniversity2);
-            deluniversities2.add(deluniversity3);
-
-
-            University2 university21 = new University2();
-            university21.setName2("ForDelete");
-            session.persist(university21);
-            List<University2> universities21 = new ArrayList<University2>();
-            universities21.add(university21);
-
-
-            Employee employee1 = new Employee();
-            employee1.setFirstName("Vova");
-            employee1.setLastName("Nik");
-            employee1.setAge("0");
-            employee1.setDeluniversities(deluniversities1);
-            employee1.setUniversities2(universities21);
-            session.save(employee1);
-
-
-            Employee employee2 = new Employee();
-            employee2.setFirstName("Kolya");
-            employee2.setLastName("Bitten");
-            employee2.setAge("22");
-            employee2.setDeluniversities(deluniversities2);
-            employee2.setUniversities2(universities21);
-            session.save(employee2);
-
-            session.getTransaction().commit();
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
-
-
 
 
 

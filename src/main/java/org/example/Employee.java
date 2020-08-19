@@ -4,8 +4,7 @@ import lombok.*;
 //import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "employee")
@@ -33,15 +32,14 @@ public class Employee {
     @Column(nullable = false)
     private String age;
 
+
+    @ElementCollection
+    private Map<Integer, String> addresses = new HashMap<>(); //не записывается в БД
+
+
     @ManyToMany
     @JoinTable(name = "Employee_University", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
-    private List<University> universities;
-
-    @ManyToMany
-    @JoinTable(name = "Employee_DelUniversity", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "deluniversity_id"))
-    private List<DelUniversity> deluniversities;
-
-
+    private Set<University> universities;
 
     @ManyToMany (cascade=CascadeType.ALL)
     @JoinTable(name = "Employee_University2", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))

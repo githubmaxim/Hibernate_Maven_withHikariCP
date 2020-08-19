@@ -39,8 +39,6 @@
         <mapping class="org.example.University"/>
         <mapping class="org.example.University2"/>
         <mapping class="org.example.City"/>
-        <mapping class="org.example.DelCity"/>
-        <mapping class="org.example.DelUniversity"/>
     </session-factory>
 </hibernate-configuration>
 
