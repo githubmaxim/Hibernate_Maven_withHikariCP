@@ -105,6 +105,8 @@ public class Main {
             Query query = session.createQuery("FROM Employee");
 
 //            Query query = session.createQuery("FROM EmployeeUUID");
+            query.setHint( "org.hibernate.readOnly", true ); //только для чтения
+            query.setHint("javax.persistence.query.timeout", 2000 ); //время ожидания зароса в миллисекундах
             query.setCacheable(true); //тут мы, для нашего запроса, включаем Кеш запросов (настроенный в "pom.xml" и "*.cfg.xml")
             query.setLockMode(LockModeType.PESSIMISTIC_WRITE); // т м, д н з, устанавливаем пессимистическую блокировку "WRITE"
             list = (List<Employee>) query.list();
