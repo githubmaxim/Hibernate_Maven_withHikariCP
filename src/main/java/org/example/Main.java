@@ -4,7 +4,7 @@ import org.hibernate.Session;
 //import org.hibernate.envers.AuditReaderFactory;
 import org.hibernate.query.Query;
 
-import javax.persistence.LockModeType;
+import javax.persistence.*;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -28,6 +28,40 @@ public class Main {
         for (ConstraintViolation<ForValidator> violation : violations) {
             System.out.println(violation.getMessage());
         }*/
+
+       /* !!! Одновременно JPQL c HQL в одном файле использовать нельзя т.к. класс Query, используемый для запросов:
+        - для HQL использует “import org.hibernate.query.Query”;
+        - для JPQL использует “import javax.persistence.Query”,
+        а "org.hibernate" перебивает "javax.persistence" !!!*/
+
+
+     /*           //!!!JPQL!!!
+        //берет настройки из "persistence.xml"
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory(
+                "my-pu");
+        EntityManager entityManager = emf.createEntityManager();
+
+        try {
+
+            entityManager.getTransaction().begin();
+
+            String qlQuery = "SELECT c FROM Employee c";
+            Query query = entityManager.createQuery(qlQuery);
+            List<Employee> cities = query.getResultList();
+
+            cities.stream().forEach((x) -> System.out.println(x));
+
+            entityManager.getTransaction().commit();
+
+        } finally {
+
+            entityManager.close();
+            emf.close();
+        }*/
+
+       //!!!HQL!!!
+       //берет настройки из "hibernate.cfg.xml"
 
         //блок для заполнения БД
         try (Session session = HibernateUtil.getSession()) {
@@ -103,12 +137,15 @@ public class Main {
             session.beginTransaction();
 
             Query query = session.createQuery("FROM Employee");
-
 //            Query query = session.createQuery("FROM EmployeeUUID");
-            query.setHint( "org.hibernate.readOnly", true ); //только для чтения
+
+            //!!! доп.настройки запросов HQL (в том числе и идущие дальше) обычно делают приложение непереносимым между
+            // базами данных, если только код, добавляющий их, сначала не проверяет диалект!!!
+            query.setHint( "org.hibernate.readOnly", true ); //определяет, что сущности и коллекции, загруженные этим запросом, должны быть помечены как доступные только для чтения
             query.setHint("javax.persistence.query.timeout", 2000 ); //время ожидания зароса в миллисекундах
             query.setCacheable(true); //тут мы, для нашего запроса, включаем Кеш запросов (настроенный в "pom.xml" и "*.cfg.xml")
             query.setLockMode(LockModeType.PESSIMISTIC_WRITE); // т м, д н з, устанавливаем пессимистическую блокировку "WRITE"
+
             list = (List<Employee>) query.list();
 //            list = (List<EmployeeUUID>) query.list();
 
@@ -124,7 +161,7 @@ public class Main {
             }
         }
 
- /*       //блок для удаления записей-объектов из БД
+        /*//блок для удаления записей-объектов из БД
         try (Session session = HibernateUtil.getSession()) {
             session.beginTransaction();
             //Удалит объект в корневой сущности и записи в промежуточных таблицах, но оставит записи в связанных таблицах
