@@ -11,9 +11,8 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode(of = {"name"})
-@ToString(of = {"name"}) //"(of =" идальше нужно писать, т.к. тут есть поле связи с другой таблицей (employees)
-                         // и его механизм этой аннотации вывести не может
+@EqualsAndHashCode(of = {"name", "cities"})//в файле City.java вывод поля ссылающегося на University.java не прописываю, иначе зациклится
+@ToString(of = {"name", "cities"}) //для отображения в ToString() нужных полей "(of ="
 public class University {
 
     @Id

@@ -12,8 +12,8 @@ import java.util.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode(of = {"firstName", "lastName", "age"})
-@ToString (of = {"firstName", "lastName", "age"}) //"(of =" идальше нужно писать, т.к. тут есть поля
+@EqualsAndHashCode(of = {"firstName", "lastName", "age", "universities"}) //в файле University.java вывод поля ссылающегося на Employee.java не прописываю, иначе зациклится
+@ToString (of = {"firstName", "lastName", "age", "universities"}) //"(of =" идальше нужно писать, т.к. тут есть поля
 // связей с другими таблицами (universities и universities2) и их механизм этой аннотации вывести не может
 public class Employee {
     @Id
@@ -34,7 +34,7 @@ public class Employee {
 
 
     @ElementCollection
-    private Map<Integer, String> addresses = new HashMap<>(); //не записывается в БД
+    private Map<Integer, String> addresses = new HashMap<>(); //создает отдельную таблицу с ключами для связки с employee в БД
 
 
     @ManyToMany
