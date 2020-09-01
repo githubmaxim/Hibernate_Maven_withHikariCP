@@ -1,17 +1,13 @@
+//!!!Не забывай коммитить/раскоммичивать открывающие и закрывающие части кода!!!
+
 package org.example;
 
-import org.hibernate.Session;
 //import org.hibernate.envers.AuditReaderFactory;
-//import org.hibernate.query.Query;
+import org.hibernate.Session;
+import org.hibernate.query.Query;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
+import javax.persistence.criteria.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -131,14 +127,30 @@ public class Main {
         try {
             entityManager.getTransaction().begin();
 
-            //!!!Criteria JPA!!!
-            /*CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+              //!!!Criteria JPA!!!
+           /* CriteriaBuilder cb = entityManager.getCriteriaBuilder();
             CriteriaQuery<Employee> cr = cb.createQuery(Employee.class);
             Root<Employee> root = cr.from(Employee.class);
             cr.select(root);
-            entityManager.createQuery(cr).getResultList().forEach(System.out::println);*/
+            entityManager.createQuery(cr).getResultList().forEach(System.out::println);
+            List<Employee> l = entityManager.createQuery(cr).getResultList();
+            Employee l1 = l.get(1);
+            String l2 = l1.getFirstName();
+            System.out.println(l2);*/
 
-            // Делаем запрос, используя механизм Графов позволяющий моментально в запросе менять тип загружаемых полей с "LAZY" на "EAGER"
+             //Запрос к 3-й внутренней таблице
+            CriteriaBuilder cb2 = entityManager.getCriteriaBuilder();
+            CriteriaQuery<String> cr2 = cb2.createQuery(String.class);
+            Root<Employee> root2 = cr2.from(Employee.class);
+            SetJoin<Employee, University> universityRoot = root2.join(Employee_.universities);
+            Join<University, City> cityRoot = universityRoot.join(University_.cities);
+            cr2.select(cityRoot.get(City_.town)).where(cb2.equal(root2.get(Employee_.firstName), "Kolya"));
+            entityManager.createQuery(cr2).getResultList().forEach(System.out::println);
+            List<String> t = entityManager.createQuery(cr2).getResultList();
+            String t1 = t.get(0);
+            System.out.println(t1);
+
+          /*  // Делаем запрос, используя механизм Графов позволяющий моментально в запросе менять тип загружаемых полей с "LAZY" на "EAGER"
             //В JPA по умолчанию "LAZY" используется для полей с аннотациями ManyToMany / OneToMany
             EntityGraph<Employee> entityGraph = entityManager.createEntityGraph(Employee.class);
             entityGraph.addAttributeNodes("firstName");
@@ -152,7 +164,7 @@ public class Main {
             TypedQuery<Employee> typedQuery = entityManager.createQuery(cr1);
             typedQuery.setHint("javax.persistence.loadgraph", entityGraph);
             Employee empl = typedQuery.getSingleResult();
-            System.out.println(empl);
+            System.out.println(empl);*/
 
 
 
@@ -191,10 +203,9 @@ public class Main {
             emf.close();
         }
 
-       //!!!HQL!!!
+/*       //!!!HQL!!!
        //берет настройки из "hibernate.cfg.xml"
 
- /*
         List<Employee> list1 = null;
         List<String> list2 = null;
 //        List<EmployeeUUID> list = null;
