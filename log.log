@@ -9,3 +9,705 @@
 2020-09-01 18:23:58,414 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
 2020-09-01 18:23:58,414 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
 2020-09-01 18:23:58,414 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-09-02 14:10:15,488 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 14:10:15,582 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 14:10:15,582 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 14:10:15,800 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 14:10:16,159 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 14:10:16,159 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:10:16,175 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 14:10:16,175 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 14:10:16,175 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 14:10:16,565 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 14:10:17,048 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 14:10:17,626 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@18dcb8a7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 14:10:17,672 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 14:10:17,704 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 14:10:17,719 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 14:10:17,750 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 14:10:17,766 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 14:10:17,782 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 14:10:17,891 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 14:10:17,953 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_1_, employee0_.age as age2_1_, employee0_.firstName as firstNam3_1_, employee0_.lastName as lastName4_1_, employee0_.version as version5_1_ from employee employee0_
+2020-09-02 14:10:17,984 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select universiti0_.employee_id as employee1_3_0_, universiti0_.university_id as universi2_3_0_, university1_.id as id1_6_1_, university1_.city_id as city_id3_6_1_, university1_.name as name2_6_1_, city2_.id as id1_0_2_, city2_.town as town2_0_2_ from Employee_University universiti0_ inner join university university1_ on universiti0_.university_id=university1_.id left outer join city city2_ on university1_.city_id=city2_.id where universiti0_.employee_id=?
+2020-09-02 14:10:17,984 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select universiti0_.employee_id as employee1_3_0_, universiti0_.university_id as universi2_3_0_, university1_.id as id1_6_1_, university1_.city_id as city_id3_6_1_, university1_.name as name2_6_1_, city2_.id as id1_0_2_, city2_.town as town2_0_2_ from Employee_University universiti0_ inner join university university1_ on universiti0_.university_id=university1_.id left outer join city city2_ on university1_.city_id=city2_.id where universiti0_.employee_id=?
+2020-09-02 14:10:18,000 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_1_, employee0_.age as age2_1_, employee0_.firstName as firstNam3_1_, employee0_.lastName as lastName4_1_, employee0_.version as version5_1_ from employee employee0_
+2020-09-02 14:10:18,000 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:54:50,446 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 14:54:50,506 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 14:54:50,510 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 14:54:50,662 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 14:54:50,879 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 14:54:50,892 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:54:50,893 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 14:54:50,893 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 14:54:50,896 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 14:54:51,240 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 14:54:51,660 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 14:54:52,135 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 14:54:52,174 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 14:54:52,202 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 14:54:52,214 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 14:54:52,239 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 14:54:52,253 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 14:54:52,277 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 14:54:52,370 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 14:54:52,428 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.age as col_0_0_, city3_.town as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on university2_.city_id=city3_.id
+2020-09-02 14:54:52,436 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:56:01,065 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 14:56:01,126 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 14:56:01,129 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 14:56:01,283 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 14:56:01,516 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 14:56:01,527 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:56:01,527 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 14:56:01,528 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 14:56:01,531 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 14:56:01,879 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 14:56:02,322 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 14:56:02,812 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 14:56:02,849 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 14:56:02,877 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 14:56:02,891 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 14:56:02,916 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 14:56:02,930 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 14:56:02,953 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 14:56:03,048 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 14:56:03,107 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.age as col_0_0_, city3_.town as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on university2_.city_id=city3_.id
+2020-09-02 14:56:03,115 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:56:41,468 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 14:56:41,533 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 14:56:41,537 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 14:56:41,705 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 14:56:41,950 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 14:56:41,962 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:56:41,962 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 14:56:41,963 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 14:56:41,966 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 14:56:42,261 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 14:56:42,650 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 14:56:43,133 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 14:56:43,169 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 14:56:43,197 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 14:56:43,211 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 14:56:43,235 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 14:56:43,249 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 14:56:43,272 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 14:56:43,366 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 14:56:43,423 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.age as col_0_0_, city3_.town as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on university2_.city_id=city3_.id
+2020-09-02 14:56:43,432 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:57:52,884 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 14:57:52,948 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 14:57:52,951 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 14:57:53,100 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 14:57:53,324 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 14:57:53,339 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:57:53,339 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 14:57:53,340 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 14:57:53,343 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 14:57:53,655 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 14:57:54,078 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 14:57:54,547 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a84788f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 14:57:54,583 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 14:57:54,610 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 14:57:54,623 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 14:57:54,646 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 14:57:54,660 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 14:57:54,685 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 14:57:54,784 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 14:57:54,845 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.age as col_0_0_, city3_.town as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on university2_.city_id=city3_.id where employee0_.firstName=?
+2020-09-02 14:57:54,852 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:59:12,055 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 14:59:12,126 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 14:59:12,129 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 14:59:12,272 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 14:59:12,490 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 14:59:12,502 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:59:12,502 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 14:59:12,502 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 14:59:12,505 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 14:59:12,847 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 14:59:13,247 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 14:59:13,773 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a84788f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 14:59:13,808 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 14:59:13,835 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 14:59:13,849 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 14:59:13,873 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 14:59:13,887 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 14:59:13,911 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 14:59:14,008 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 14:59:14,069 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.age as col_0_0_, city3_.town as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on university2_.city_id=city3_.id where employee0_.firstName=?
+2020-09-02 14:59:14,077 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 14:59:14,077 [ERROR] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:332) - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC
+2020-09-02 15:00:44,107 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 15:00:44,172 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 15:00:44,176 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 15:00:44,328 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 15:00:44,543 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 15:00:44,552 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:00:44,553 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 15:00:44,553 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 15:00:44,556 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 15:00:44,895 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 15:00:45,304 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 15:00:45,800 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a84788f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 15:00:45,836 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 15:00:45,864 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 15:00:45,878 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 15:00:45,903 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 15:00:45,917 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 15:00:45,940 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 15:00:46,037 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 15:00:46,099 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.age as col_0_0_, city3_.town as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on university2_.city_id=city3_.id where employee0_.firstName=?
+2020-09-02 15:00:46,106 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:00:46,107 [ERROR] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:332) - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC
+2020-09-02 15:04:54,756 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 15:04:54,759 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 15:04:54,887 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-09-02 15:04:55,178 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 15:04:55,381 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-09-02 15:04:55,397 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-09-02 15:04:55,397 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-09-02 15:04:55,709 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-09-02 15:04:55,724 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 15:04:56,174 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 15:04:56,277 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-09-02 15:04:56,287 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 15:04:56,290 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-09-02 15:04:56,323 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 15:04:56,803 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table city (id integer not null auto_increment, town varchar(255) not null, primary key (id)) engine=MyISAM
+2020-09-02 15:04:56,811 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table employee (id integer not null auto_increment, age integer not null, firstName varchar(255) not null, lastName varchar(255) not null, version integer not null, primary key (id)) engine=MyISAM
+2020-09-02 15:04:56,816 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table Employee_addresses (Employee_id integer not null, addresses varchar(255), addresses_KEY integer not null, primary key (Employee_id, addresses_KEY)) engine=MyISAM
+2020-09-02 15:04:56,820 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table Employee_University (employee_id integer not null, university_id integer not null, primary key (employee_id, university_id)) engine=MyISAM
+2020-09-02 15:04:56,823 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table Employee_University2 (employee_id integer not null, university_id integer not null) engine=MyISAM
+2020-09-02 15:04:56,826 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table employeeUUID (id binary(255) not null, FIRST_NAME varchar(255), LAST_NAME varchar(255), version integer not null, primary key (id)) engine=MyISAM
+2020-09-02 15:04:56,830 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table university (id integer not null auto_increment, name varchar(255) not null, city_id integer, primary key (id)) engine=MyISAM
+2020-09-02 15:04:56,833 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - create table university2 (id integer not null auto_increment, name2 varchar(255) not null, primary key (id)) engine=MyISAM
+2020-09-02 15:04:56,837 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 15:04:56,850 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 15:04:56,863 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 15:04:56,876 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 15:04:56,890 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 15:04:56,902 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 15:04:56,983 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into city (town) values (?)
+2020-09-02 15:04:57,011 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into city (town) values (?)
+2020-09-02 15:04:57,014 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (city_id, name) values (?, ?)
+2020-09-02 15:04:57,016 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (city_id, name) values (?, ?)
+2020-09-02 15:04:57,018 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university (city_id, name) values (?, ?)
+2020-09-02 15:04:57,019 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into university2 (name2) values (?)
+2020-09-02 15:04:57,027 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-09-02 15:04:57,032 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into employee (age, firstName, lastName, version) values (?, ?, ?, ?)
+2020-09-02 15:04:57,041 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
+2020-09-02 15:04:57,043 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
+2020-09-02 15:04:57,044 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-09-02 15:04:57,045 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
+2020-09-02 15:04:57,046 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University (employee_id, university_id) values (?, ?)
+2020-09-02 15:04:57,047 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - insert into Employee_University2 (employee_id, university_id) values (?, ?)
+2020-09-02 15:06:34,605 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 15:06:34,673 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 15:06:34,676 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 15:06:34,823 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 15:06:35,064 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 15:06:35,077 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:06:35,078 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 15:06:35,078 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 15:06:35,081 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 15:06:35,391 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 15:06:35,808 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 15:06:36,275 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a84788f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 15:06:36,309 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 15:06:36,334 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 15:06:36,346 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 15:06:36,371 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 15:06:36,385 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 15:06:36,410 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 15:06:36,506 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 15:06:36,567 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.age as col_0_0_, city3_.town as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on university2_.city_id=city3_.id where employee0_.firstName=?
+2020-09-02 15:06:36,576 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:42:15,253 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 15:42:15,320 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 15:42:15,323 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 15:42:15,488 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 15:42:15,711 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 15:42:15,722 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:42:15,723 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 15:42:15,724 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 15:42:15,727 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 15:42:16,049 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 15:42:16,447 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 15:42:16,960 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bebd114] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 15:42:16,994 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 15:42:17,021 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 15:42:17,034 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 15:42:17,060 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 15:42:17,075 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 15:42:17,098 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 15:42:17,174 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 15:42:17,236 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.firstName as col_0_0_, university2_.name as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where city3_.town='Lviv'
+2020-09-02 15:42:17,242 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:42:17,243 [ERROR] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:332) - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC
+2020-09-02 15:44:09,636 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 15:44:09,694 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 15:44:09,697 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 15:44:09,886 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 15:44:10,116 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 15:44:10,125 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:44:10,126 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 15:44:10,126 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 15:44:10,128 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 15:44:10,452 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 15:44:10,872 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 15:44:11,354 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bebd114] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 15:44:11,389 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 15:44:11,417 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 15:44:11,430 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 15:44:11,455 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 15:44:11,469 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 15:44:11,500 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 15:44:11,577 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 15:44:11,635 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.firstName as col_0_0_, university2_.name as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where city3_.town='Lviv'
+2020-09-02 15:44:11,642 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:44:11,643 [ERROR] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:332) - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC
+2020-09-02 15:47:12,494 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 15:47:12,553 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 15:47:12,555 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 15:47:12,708 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 15:47:12,924 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 15:47:12,936 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:47:12,936 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 15:47:12,937 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 15:47:12,940 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 15:47:13,269 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 15:47:13,669 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 15:47:14,170 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bebd114] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 15:47:14,207 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 15:47:14,234 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 15:47:14,247 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 15:47:14,271 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 15:47:14,285 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 15:47:14,308 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 15:47:14,384 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 15:47:14,442 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.firstName as col_0_0_, university2_.name as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where city3_.town='Lviv'
+2020-09-02 15:47:14,449 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:47:14,449 [ERROR] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:332) - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC
+2020-09-02 15:52:13,376 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 15:52:13,439 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 15:52:13,439 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 15:52:13,595 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 15:52:13,798 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 15:52:13,813 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:52:13,813 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 15:52:13,813 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 15:52:13,813 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 15:52:14,156 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 15:52:14,546 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 15:52:15,046 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bebd114] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 15:52:15,092 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 15:52:15,108 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 15:52:15,124 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 15:52:15,155 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 15:52:15,170 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 15:52:15,186 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 15:52:15,264 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 15:52:15,326 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.firstName as col_0_0_, university2_.name as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where city3_.town='Lviv'
+2020-09-02 15:52:15,326 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:58:51,896 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 15:58:51,959 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 15:58:51,959 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 15:58:52,115 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 15:58:52,318 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 15:58:52,333 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 15:58:52,333 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 15:58:52,333 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 15:58:52,349 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 15:58:52,708 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 15:58:53,098 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 15:58:53,581 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bebd114] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 15:58:53,628 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 15:58:53,644 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 15:58:53,675 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 15:58:53,690 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 15:58:53,706 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 15:58:53,737 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 15:58:53,800 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 15:58:53,831 [ERROR] [main            ] [nal.ast.ErrorTracker] (ErrorTracker.java:62) - line 1:46: unexpected token: Employee
+2020-09-02 15:58:53,831 [ERROR] [main            ] [nal.ast.ErrorTracker] (ErrorTracker.java:57) - line 1:46: unexpected token: Employee
+line 1:46: unexpected token: Employee
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1077)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:748)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:319)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:198)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:289)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:188)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:143)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:119)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:80)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:595)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:704)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:729)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at org.example.Main.main(Main.java:192)
+2020-09-02 15:58:53,831 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:00:07,483 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 16:00:07,545 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:00:07,561 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:00:07,701 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:00:07,920 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 16:00:07,935 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:00:07,935 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 16:00:07,935 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 16:00:07,935 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 16:00:08,247 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:00:08,637 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:00:09,152 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 16:00:09,183 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:00:09,215 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:00:09,230 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:00:09,246 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:00:09,261 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:00:09,293 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:00:09,355 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:00:09,386 [ERROR] [main            ] [nal.ast.ErrorTracker] (ErrorTracker.java:62) - line 1:46: unexpected token: Employee
+2020-09-02 16:00:09,386 [ERROR] [main            ] [nal.ast.ErrorTracker] (ErrorTracker.java:57) - line 1:46: unexpected token: Employee
+line 1:46: unexpected token: Employee
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1077)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:748)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:319)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:198)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:289)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:188)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:143)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:119)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:80)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:595)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:704)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:729)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at org.example.Main.main(Main.java:192)
+2020-09-02 16:00:09,386 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:00:47,287 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 16:00:47,349 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:00:47,349 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:00:47,489 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:00:47,708 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 16:00:47,708 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:00:47,708 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 16:00:47,708 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 16:00:47,723 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 16:00:48,035 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:00:48,425 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:00:48,925 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 16:00:48,971 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:00:48,987 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:00:49,003 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:00:49,034 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:00:49,049 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:00:49,065 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:00:49,143 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:00:49,205 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.firstName as col_0_0_, employee0_.age as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where city3_.town='Lviv'
+2020-09-02 16:00:49,205 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:01:06,432 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 16:01:06,494 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:01:06,494 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:01:06,650 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:01:06,869 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 16:01:06,884 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:01:06,884 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 16:01:06,884 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 16:01:06,884 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 16:01:07,227 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:01:07,633 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:01:08,148 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@102c18e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 16:01:08,179 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:01:08,210 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:01:08,226 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:01:08,241 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:01:08,257 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:01:08,288 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:01:08,366 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:01:08,429 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.firstName as col_0_0_, employee0_.age as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where city3_.town='Lviv'
+2020-09-02 16:01:08,429 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:02:55,700 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 16:02:55,763 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:02:55,763 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:02:55,919 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:02:56,153 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 16:02:56,153 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:02:56,153 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 16:02:56,153 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 16:02:56,168 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 16:02:56,480 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:02:56,870 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:02:57,385 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 16:02:57,432 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:02:57,448 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:02:57,463 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:02:57,494 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:02:57,510 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:02:57,526 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:02:57,604 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:02:57,666 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select city3_.town as col_0_0_, employee0_.age as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where employee0_.firstName='Kolya'
+2020-09-02 16:02:57,666 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:03:54,268 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 16:03:54,330 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:03:54,346 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:03:54,486 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:03:54,720 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 16:03:54,736 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:03:54,736 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 16:03:54,736 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 16:03:54,736 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 16:03:55,048 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:03:55,485 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:03:55,953 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 16:03:56,000 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:03:56,015 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:03:56,031 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:03:56,062 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:03:56,078 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:03:56,093 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:03:56,171 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:03:56,234 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select city3_.town as col_0_0_, employee0_.age as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where employee0_.firstName='Kolya'
+2020-09-02 16:03:56,234 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:04:11,285 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 16:04:11,347 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:04:11,347 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:04:11,503 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:04:11,722 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 16:04:11,737 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:04:11,737 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 16:04:11,737 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 16:04:11,737 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 16:04:12,049 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:04:12,439 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:04:12,939 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 16:04:12,970 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:04:13,001 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:04:13,017 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:04:13,032 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:04:13,048 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:04:13,079 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:04:13,141 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:04:13,204 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select city3_.town as col_0_0_, employee0_.age as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where employee0_.firstName='Kolya'
+2020-09-02 16:04:13,219 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:04:25,738 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 16:04:25,800 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:04:25,816 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:04:25,972 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:04:26,174 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 16:04:26,174 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:04:26,174 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 16:04:26,174 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 16:04:26,190 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 16:04:26,533 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:04:26,986 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:04:27,438 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 16:04:27,469 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:04:27,500 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:04:27,516 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:04:27,532 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:04:27,547 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:04:27,578 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:04:27,656 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:04:27,719 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select city3_.town as col_0_0_, employee0_.age as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where employee0_.firstName='Kolya'
+2020-09-02 16:04:27,719 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:04:43,271 [INFO ] [main            ] [ernal.util.LogHelper] (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [
+	name: my-pu
+	...]
+2020-09-02 16:04:43,334 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:04:43,334 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:04:43,505 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:04:43,708 [WARN ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:73) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-09-02 16:04:43,724 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:129) - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:04:43,724 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:138) - HHH10001001: Connection properties: {password=****, user=root}
+2020-09-02 16:04:43,724 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:143) - HHH10001003: Autocommit mode: false
+2020-09-02 16:04:43,724 [INFO ] [main            ] [nnectionProviderImpl] (DriverManagerConnectionProviderImpl.java:281) - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-09-02 16:04:44,067 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:04:44,504 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:04:44,972 [INFO ] [main            ] [m.connections.access] (DdlTransactionIsolatorNonJtaImpl.java:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26e0d39c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-09-02 16:04:45,003 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:04:45,034 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:04:45,034 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:04:45,065 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:04:45,081 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:04:45,097 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:04:45,175 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:04:45,237 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select city3_.town as col_0_0_, employee0_.age as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where employee0_.firstName='Kolya'
+2020-09-02 16:04:45,253 [INFO ] [main            ] [.connections.pooling] (DriverManagerConnectionProviderImpl.java:233) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC]
+2020-09-02 16:12:39,792 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:12:39,792 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:12:39,917 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-09-02 16:12:40,198 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:12:40,385 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-09-02 16:12:40,385 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-09-02 16:12:40,401 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-09-02 16:12:40,697 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-09-02 16:12:40,713 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:12:41,181 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:12:41,274 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-09-02 16:12:41,274 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:12:41,290 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-09-02 16:12:41,321 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:12:41,789 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:12:41,820 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:12:41,836 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:12:41,867 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:12:41,883 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:12:41,898 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:12:41,976 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:12:42,039 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_1_, employee0_.age as age2_1_, employee0_.firstName as firstNam3_1_, employee0_.lastName as lastName4_1_, employee0_.version as version5_1_ from employee employee0_ for update
+2020-09-02 16:12:42,085 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.firstName as col_0_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where city3_.town='Lviv'
+2020-09-02 16:13:33,260 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:13:33,260 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:13:33,384 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-09-02 16:13:33,665 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:13:33,884 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-09-02 16:13:33,884 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-09-02 16:13:33,899 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-09-02 16:13:34,211 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-09-02 16:13:34,227 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:13:34,710 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:13:34,788 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-09-02 16:13:34,788 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:13:34,804 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-09-02 16:13:34,835 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:13:35,303 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:13:35,334 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:13:35,350 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:13:35,366 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:13:35,381 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:13:35,412 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:13:35,490 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:13:35,537 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_1_, employee0_.age as age2_1_, employee0_.firstName as firstNam3_1_, employee0_.lastName as lastName4_1_, employee0_.version as version5_1_ from employee employee0_ for update
+2020-09-02 16:14:23,386 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:14:23,402 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:14:23,511 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-09-02 16:14:23,761 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:14:23,948 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-09-02 16:14:23,948 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-09-02 16:14:23,964 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-09-02 16:14:24,276 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-09-02 16:14:24,276 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:14:24,744 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:14:24,837 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-09-02 16:14:24,853 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:14:24,853 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-09-02 16:14:24,884 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:14:25,383 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:14:25,399 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:14:25,414 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:14:25,446 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:14:25,461 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:14:25,477 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:14:25,555 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:14:25,617 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.id as id1_1_, employee0_.age as age2_1_, employee0_.firstName as firstNam3_1_, employee0_.lastName as lastName4_1_, employee0_.version as version5_1_ from employee employee0_ for update
+2020-09-02 16:14:25,648 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select universiti0_.employee_id as employee1_3_0_, universiti0_.university_id as universi2_3_0_, university1_.id as id1_6_1_, university1_.city_id as city_id3_6_1_, university1_.name as name2_6_1_, city2_.id as id1_0_2_, city2_.town as town2_0_2_ from Employee_University universiti0_ inner join university university1_ on universiti0_.university_id=university1_.id left outer join city city2_ on university1_.city_id=city2_.id where universiti0_.employee_id=?
+2020-09-02 16:14:25,664 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select universiti0_.employee_id as employee1_3_0_, universiti0_.university_id as universi2_3_0_, university1_.id as id1_6_1_, university1_.city_id as city_id3_6_1_, university1_.name as name2_6_1_, city2_.id as id1_0_2_, city2_.town as town2_0_2_ from Employee_University universiti0_ inner join university university1_ on universiti0_.university_id=university1_.id left outer join city city2_ on university1_.city_id=city2_.id where universiti0_.employee_id=?
+2020-09-02 16:16:42,077 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:16:42,092 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:16:42,202 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-09-02 16:16:42,482 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:16:42,670 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-09-02 16:16:42,670 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-09-02 16:16:42,685 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-09-02 16:16:42,997 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-09-02 16:16:43,013 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:16:43,465 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:16:43,574 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-09-02 16:16:43,574 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:16:43,590 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-09-02 16:16:43,621 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:16:44,105 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:16:44,120 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:16:44,136 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:16:44,167 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:16:44,183 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:16:44,198 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:16:44,292 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:16:44,339 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.firstName as col_0_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where city3_.town='Lviv'
+2020-09-02 16:17:28,103 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:17:28,103 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:17:28,212 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-09-02 16:17:28,477 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:17:28,680 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-09-02 16:17:28,696 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-09-02 16:17:28,696 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-09-02 16:17:29,008 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-09-02 16:17:29,008 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:17:29,476 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:17:29,569 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-09-02 16:17:29,569 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:17:29,585 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-09-02 16:17:29,616 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:17:30,115 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:17:30,131 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:17:30,146 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:17:30,178 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:17:30,193 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:17:30,209 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:17:30,287 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:17:30,349 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select employee0_.firstName as col_0_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where city3_.town='Lviv'
+2020-09-02 16:20:12,440 [INFO ] [main            ] [rg.hibernate.Version] (Version.java:46) - HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-02 16:20:12,440 [INFO ] [main            ] [nate.cfg.Environment] (Environment.java:213) - HHH000206: hibernate.properties not found
+2020-09-02 16:20:12,550 [WARN ] [main            ] [nate.orm.deprecation] (LocalXmlResourceResolver.java:91) - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2020-09-02 16:20:12,799 [INFO ] [main            ] [tions.common.Version] (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-02 16:20:13,018 [INFO ] [main            ] [ionProviderInitiator] (ConnectionProviderInitiator.java:137) - HHH000130: Instantiating explicit connection provider: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+2020-09-02 16:20:13,018 [WARN ] [main            ] [riConnectionProvider] (HikariConnectionProvider.java:70) - com.zaxxer.hikari.hibernate.HikariConnectionProvider has been deprecated for versions of Hibernate 4.3.6 and newer.  Please switch to org.hibernate.hikaricp.internal.HikariCPConnectionProvider.
+2020-09-02 16:20:13,033 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:80) - HikariPool-1 - Starting...
+2020-09-02 16:20:13,345 [INFO ] [main            ] [ari.HikariDataSource] (HikariDataSource.java:82) - HikariPool-1 - Start completed.
+2020-09-02 16:20:13,345 [INFO ] [main            ] [nate.dialect.Dialect] (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-02 16:20:13,813 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:20:13,907 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-update-timestamps-region' created in EhcacheManager.
+2020-09-02 16:20:13,907 [WARN ] [main            ] [.hibernate.orm.cache] (JCacheRegionFactory.java:107) - HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2020-09-02 16:20:13,922 [INFO ] [main            ] [.core.EhcacheManager] (EhcacheManager.java:305) - Cache 'default-query-results-region' created in EhcacheManager.
+2020-09-02 16:20:13,954 [INFO ] [main            ] [nternal.util.Version] (Version.java:21) - HV000001: Hibernate Validator 6.1.5.Final
+2020-09-02 16:20:14,438 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_addresses add constraint FKsl9x3le7y9j3lf8cycdtw0dth foreign key (Employee_id) references employee (id)
+2020-09-02 16:20:14,469 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKcn23kjle52wtbht9tyb6c4eqt foreign key (university_id) references university (id)
+2020-09-02 16:20:14,485 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University add constraint FKfldx4f3xi3b99t0og61ykddg9 foreign key (employee_id) references employee (id)
+2020-09-02 16:20:14,501 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKtoathu6oj0xyrfyhgoqw5gr0g foreign key (university_id) references university2 (id)
+2020-09-02 16:20:14,516 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table Employee_University2 add constraint FKr9h3u1o1xxf6o902suim6srge foreign key (employee_id) references employee (id)
+2020-09-02 16:20:14,547 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - alter table university add constraint FK70cg9iket7hgqy26vs3d652uw foreign key (city_id) references city (id)
+2020-09-02 16:20:14,610 [INFO ] [main            ] [atorFactoryInitiator] (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-02 16:20:14,672 [DEBUG] [main            ] [   org.hibernate.SQL] (SqlStatementLogger.java:94) - select city3_.town as col_0_0_, employee0_.age as col_1_0_ from employee employee0_ inner join Employee_University universiti1_ on employee0_.id=universiti1_.employee_id inner join university university2_ on universiti1_.university_id=university2_.id inner join city city3_ on (university2_.city_id=city3_.id) where employee0_.firstName='Kolya'

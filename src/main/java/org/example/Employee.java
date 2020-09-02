@@ -30,7 +30,7 @@ public class Employee {
     private String lastName;
 
     @Column(nullable = false)
-    private String age;
+    private Integer age;
 
 
     @ElementCollection
