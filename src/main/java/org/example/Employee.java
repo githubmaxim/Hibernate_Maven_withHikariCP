@@ -13,7 +13,7 @@ import java.util.*;
 @Getter
 @Setter
 @EqualsAndHashCode(of = {"firstName", "lastName", "age", "universities"}) //в файле University.java вывод поля ссылающегося на Employee.java не прописываю, иначе зациклится
-@ToString (of = {"firstName", "lastName", "age", "universities"}) //"(of =" идальше нужно писать, т.к. тут есть поля
+@ToString (of = {"firstName", "lastName", "age", "universities"}) //"(of =" и дальше нужно писать, т.к. тут есть поля
 // связей с другими таблицами (universities и universities2) и их механизм этой аннотации вывести не может
 public class Employee {
     @Id
@@ -34,7 +34,12 @@ public class Employee {
 
 
     @ElementCollection
-    private Map<Integer, String> addresses = new HashMap<>(); //создает отдельную таблицу с ключами для связки с employee в БД
+    private Map<Integer, String> addresses = new HashMap<>(); //это отдельный, не связанный с остальными таблицами механизм создания поля
+    // который создает для этого поля отдельную таблицу с ключами для связки с employee в БД.
+    //Созданная таблица не может содержать коллекции сущностей, а только коллекцию простых типов (строк и т. Д.) Или коллекцию встраиваемых
+    // элементов (класс с аннотацией @Embeddable ).
+    //Это также означает, что элементы этой коллекции изменяются при изменении сущности: удаляются при удалении сущности и т. Д. У них
+    // не может быть собственного жизненного цикла.
 
 
     @ManyToMany

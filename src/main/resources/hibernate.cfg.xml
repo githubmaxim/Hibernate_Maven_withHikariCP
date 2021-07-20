@@ -34,6 +34,7 @@
         <property name="hibernate.javax.cache.provider">org.ehcache.jsr107.EhcacheCachingProvider</property>
         <property name="hibernate.cache.use_query_cache">true</property> <!--разрешаем Кеш запросов-->
 
+<!--    Перечисления всех классов сущностей для возможности нахождения их Hibernate-ом-->
         <mapping class="org.example.Employee"/>
         <mapping class="org.example.EmployeeUUID"/>
         <mapping class="org.example.University"/>

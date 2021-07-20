@@ -35,7 +35,7 @@ public class Main {
 
 /*        //на !!!HQL!!!
         try (Session session = HibernateUtil.getSession()) {
-//        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
+      //try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
             session.beginTransaction();
 
             City city1 = new City();
