@@ -40,13 +40,14 @@ public class Employee {
     // элементов (класс с аннотацией @Embeddable ).
     //Это также означает, что элементы этой коллекции изменяются при изменении сущности: удаляются при удалении сущности и т. Д. У них
     // не может быть собственного жизненного цикла.
+    //Лучше не использовать, т.к. в последствии нельзя будет подключить эти данные к другой таблице!!!
 
 
     @ManyToMany
     @JoinTable(name = "Employee_University", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
     private Set<University> universities;
 
-    @ManyToMany (cascade=CascadeType.ALL)
+    @ManyToMany (cascade=CascadeType.ALL) // "cascade=CascadeType.ALL" - при удалении этого поля сущности удалит связанное поле в файле "University"
     @JoinTable(name = "Employee_University2", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "university_id"))
     private List<University2> universities2;
 }

@@ -17,7 +17,7 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
 
-       /* //Блок работы Валидации (проверяет какое-то условие для вводимых параметров.
+       /* //БЛОК ДЛЯ работы Валидации (проверяет какое-то условие для вводимых параметров.
           // Действует как пробрасываемые исключения - реакция на событие из серии "потом проверят и напишут")
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
@@ -31,7 +31,10 @@ public class Main {
         }*/
 
 
-        //Блок для заполнения БД
+
+
+
+        //БЛОК ДЛЯ заполнения БД
 
 /*        //на !!!HQL!!!
         try (Session session = HibernateUtil.getSession()) {
@@ -110,11 +113,14 @@ public class Main {
 //        }
 
 
-        //Блок для создания запроса к БД и выводу его результатов
+
+
+
+        //БЛОК ДЛЯ создания запроса к БД и выводу его результатов
 
         //!!!JPA!!!
         //берет настройки из "persistence.xml"
-        // !!! Одновременно JPQL c HQL в одном файле использовать нельзя (хотя Criteria плчему-то работает) т.к. класс Query, используемый для запросов:
+        // !!! Одновременно JPQL c HQL в одном файле использовать нельзя (хотя Criteria почему-то работает) т.к. класс Query, используемый для запросов:
         //- для HQL использует “import org.hibernate.query.Query”;
         //- для JPQL использует “import javax.persistence.Query”,
         //а "org.hibernate" перебивает "javax.persistence" !!!
@@ -129,12 +135,15 @@ public class Main {
           /*  //Запрос на выборку нескольких строк 2-х разных столбцов из корневой и 3-й внутренней таблицы
             // и потом из них переменных
             CriteriaBuilder cb3 = em.getCriteriaBuilder();
-            CriteriaQuery<Tuple> cr3 = cb3.createTupleQuery(); //"Tuple" 2-х местах в типе и названии метода
+            CriteriaQuery<Tuple> cr3 = cb3.createTupleQuery(); //"Tuple" в 2-х местах - в типе и названии метода
             Root<Employee> root3 = cr3.from(Employee.class);
+
+            //!начинаем обращаться к специальным классам созданым Matamodel-ю (Employee_,University_,City_), дающим возможность еще на этапе компиляции увидеть, что поля сущности(ломающие запрос) были изменены
             SetJoin<Employee, University> universityRoot3 = root3.join(Employee_.universities);
             Join<University, City> cityRoot3 = universityRoot3.join(University_.cities);
             cr3.multiselect(root3.get(Employee_.age).alias("ag"), cityRoot3.get(City_.town).alias("tow"))
                     .where(cb3.equal(root3.get(Employee_.firstName), "Kolya"));
+
             List<Tuple> result = em.createQuery(cr3).getResultList();
             String a = (String) result.get(1).get("tow");
             Integer b = (Integer) result.get(1).get("ag");
@@ -299,7 +308,9 @@ public class Main {
 
 
 
-        //        //блок для удаления записей-объектов из БД
+
+
+        //        //БЛОК ДЛЯ удаления записей-объектов из БД
 
         //!!!HQL!!!
 //        try (Session session = HibernateUtil.getSession()) {
@@ -317,7 +328,10 @@ public class Main {
 //        }
 
 
-        //Блок работы Envers, покажет когда и какие изменения были сделаны в таблице Employee.
+
+
+
+        //БЛОК ДЛЯ Envers, покажет когда и какие изменения были сделаны в таблице Employee.
         //Не увидит если провести изменения на стороне БД!
 //        try (Session session = HibernateUtil.getSession()) {
 ////        try (Session session = HibernateUtilWithLongCodeForListener.getSession()) {
