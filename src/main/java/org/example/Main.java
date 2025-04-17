@@ -138,7 +138,7 @@ public class Main {
             CriteriaQuery<Tuple> cr3 = cb3.createTupleQuery(); //"Tuple" в 2-х местах - в типе и названии метода
             Root<Employee> root3 = cr3.from(Employee.class);
 
-            //!начинаем обращаться к специальным классам созданым Matamodel-ю (Employee_,University_,City_), дающим возможность еще на этапе компиляции увидеть, что поля сущности(ломающие запрос) были изменены
+            //!начинаем обращаться к специальным классам созданым Matamodel-ю (Employee_,University_,City_), дающим возможность еще на этапе компиляции увидеть, что поля сущности были изменены и ломают запрос
             SetJoin<Employee, University> universityRoot3 = root3.join(Employee_.universities);
             Join<University, City> cityRoot3 = universityRoot3.join(University_.cities);
             cr3.multiselect(root3.get(Employee_.age).alias("ag"), cityRoot3.get(City_.town).alias("tow"))
